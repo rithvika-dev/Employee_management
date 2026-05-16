@@ -10,7 +10,7 @@ const app = exp();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+      "http://localhost:5173","https://employeemanagement-plum.vercel.app"
     ],
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true
