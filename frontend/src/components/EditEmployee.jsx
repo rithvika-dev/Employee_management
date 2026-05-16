@@ -35,7 +35,7 @@ function EditEmployee() {
       setLoading(true)
 
       const res = await axios.put(
-        `http://localhost:5000/emp-api/employee/${state._id}`,
+        `https://employee-management-1-188f.onrender.com/emp-api/employee/${state._id}`,
         modifiedemp
       )
 

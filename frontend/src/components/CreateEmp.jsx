@@ -20,7 +20,7 @@ function CreateEmp() {
     try {
       setLoading(true)
 
-      let res = await fetch("http://localhost:5000/emp-api/employee", {
+      let res = await fetch("https://employee-management-1-188f.onrender.com/emp-api/employee", {
         method: "POST",
         body: JSON.stringify(empobj),
         headers: { "Content-type": "application/json" }

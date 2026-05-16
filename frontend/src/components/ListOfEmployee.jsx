@@ -26,7 +26,7 @@ function ListOfEmployee() {
     try {
 
       let res = await axios.delete(
-        `http://localhost:5000/emp-api/employee/${id}`
+        `https://employee-management-1-188f.onrender.com/emp-api/employee/${id}`
       )
 
       if (res.status === 200) {
@@ -46,7 +46,7 @@ function ListOfEmployee() {
       setLoading(true)
 
       let res = await axios(
-        "http://localhost:5000/emp-api/employee"
+        "https://employee-management-1-188f.onrender.com/emp-api/employee"
       )
 
       if (res.status === 200) {
