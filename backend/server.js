@@ -4,6 +4,7 @@ import { empApp } from "./API/EmployeeAPI.js";
 import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
+console.log("DB_URL:",process.env.DB_URL);
 const app = exp();
 // CORS
 app.use(
@@ -25,7 +26,7 @@ app.use("/emp-api", empApp);
 // DB connection
 const connectDB = async () => {
   try {
-    await connect("process.env.DB_URL");
+    await connect(process.env.DB_URL);
     console.log("DB connected");
     app.listen(5000, () => console.log("server listening on port 5000.."));
   } catch (err) {
