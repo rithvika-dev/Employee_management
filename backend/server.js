@@ -25,7 +25,7 @@ app.use("/emp-api", empApp);
 // DB connection
 const connectDB = async () => {
   try {
-    await connect("mongodb://localhost:27017/abcddb");
+    await connect("process.env.DB_URL");
     console.log("DB connected");
     app.listen(5000, () => console.log("server listening on port 5000.."));
   } catch (err) {
